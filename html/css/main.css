@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Light";
+    src: url("../font/Oswald-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Bold";
+    src: url("../font/Oswald-Bold.ttf") format("opentype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    /* z-index: 999; */
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.generalSection {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    
+    background: linear-gradient(280.01deg, rgba(0, 209, 255, 0.1) -11%, rgba(0, 209, 255, 0) 77.45%),
+        linear-gradient(130.92deg, rgba(0, 163, 255, 0.55) 8.91%, rgba(0, 163, 255, 0.2) 73.22%), rgba(0, 0, 0, 0.9);
+    
+    /*
+    background-color: #1f2531f3;
+    background-image: url("/html/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+/*  JOB LIST */
+
+.joblist {
+    position: absolute;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+
+    border-radius: 5px;
+    height: 85%;
+    width: 30%;
+    top: 5%;
+    left: 2%;
+    padding-top: 1%;
+}
+
+.joblist::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 12px;
+    height: 5px;
+    border-radius: 10px;
+    transition: 200ms;
+
+}
+
+.joblist::-webkit-scrollbar-track {
+    height: 4px;
+    background: linear-gradient(44.32deg, rgba(19, 168, 179, 0.575) -4.19%, rgba(0, 0, 0, 0) 68.55%),
+    linear-gradient(219.77deg, rgba(0, 247, 255, 0.452) 17.71%, rgba(0, 0, 0, 0.322) 125.01%), rgba(0, 0, 0, 0.7);
+
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.joblist::-webkit-scrollbar-thumb {
+    height: 6px;
+    border-radius: 10px;
+
+    background: #ffffff;
+    transition: 200ms;
+}
+
+.joblist::-webkit-scrollbar-thumb:hover {
+    height: 6px;
+    border-radius: 10px;
+
+    background: #ffffff9a;
+    transition: 200ms;
+}
+
+.profilePhoto {
+    border-radius: 0.3vw;
+    overflow: hidden;
+}
+
+/*  JOB LIST [END] */
+
+/* LISTA ITEMOW W JOB LISCIE */
+.jobitem {
+    overflow: hidden;
+    margin: auto auto 5% auto;
+    width: 90%;
+    height: 15%;
+    background-color: #1a2a339c;
+    border-radius: 5px;
+    border: 1px solid rgb(21, 255, 0);
+    box-shadow: 255px 3px 125px rgba(0, 255, 13, 0.288) inset, 0px 0px 15px rgba(0, 255, 13, 0.253);
+    
+    transition: 200ms;
+}
+
+.jobitem_NO {
+    overflow: hidden;
+    margin: auto auto 5% auto;
+    width: 90%;
+    height: 15%;
+    background-color: #1a2a339c;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 255px 3px 125px rgba(255, 0, 0, 0.288) inset, 0px 0px 15px rgba(255, 0, 0, 0.253);
+    
+    transition: 200ms;
+}
+
+.jobitem:hover {
+    transform: scale(97%);
+}
+
+.jobitem_img {
+
+    height: 100%;
+    width: 20%;
+    padding-left: 3%;
+    transform: scale(100%);
+
+}
+
+.jobitem_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.jobitem:not(:last-child) {
+    margin-bottom: 1vw;
+}
+
+.jobitem.locked {
+    background: linear-gradient(0deg, rgba(255, 112, 112, 0.13), rgba(255, 112, 112, 0.13)), rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+.jobitem.active {
+    background: linear-gradient(0deg, rgba(221, 202, 45, 0.15), rgba(221, 202, 45, 0.15)), rgba(255, 255, 255, 0.15);
+}
+
+.jobitem_name {
+ 
+    font-family: 'Barlow Condensed', sans-serif;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 25%;
+    margin-top: -20%;
+    vertical-align: auto;
+    font-size: 35px;
+    text-shadow: 0px 0px 2px white;
+    color: rgb(255, 255, 255);
+}
+
+.jobitem_access {
+    font-family: 'Oswald Light';
+
+
+    color: rgb(21, 253, 0);
+    font-size: 15px;
+    text-align: center;
+    width: 85px;
+    padding: 5px;
+    margin-left: 25%;
+    border-radius: 5px;
+    border: 1px rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+.jobitem_access_no {
+    font-family: 'Oswald Light';
+
+
+    color: rgb(253, 0, 0);
+    font-size: 15px;
+    text-align: center;
+    width: 85px;
+    padding: 5px;
+    margin-left: 25%;
+    border-radius: 5px;
+    border: 1px rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+
+.jobitem_level {
+    
+    margin-top: -15%;
+    margin-left: 75%;
+    width: 84px;
+    height: 84px;
+
+    font-family: 'Oswald Light';
+    color: #0bee0b;
+    font-weight: 900;
+    font-size: 38px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+}
+
+.jobitem_level_no {
+    
+    margin-top: -15%;
+    margin-left: 75%;
+    width: 84px;
+    height: 84px;
+
+    font-family: 'Oswald Light';
+    color: #ee0b0b;
+    font-weight: 900;
+    font-size: 38px;
+    background-color: rgba(0, 0, 0, 0.295);
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+}
+
+.jobitem_level_inner {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.jobitem_level_innertext {
+    font-family: 'Oswald Light';
+    text-align: center;
+    font-size: 15px;
+    margin-top: 0%;
+    color: white;
+
+}
+
+/* LISTA ITEMOW W JOB LISCIE [END]*/
+/* INFO O GRACZU */
+
+.playerinfo_window {
+    width: 60%;
+    height: 15%;
+    margin-top: 3%;
+    margin-left: 35%;
+
+    position: absolute;
+    /* background: linear-gradient(44.32deg, rgba(12, 151, 206, 0.849) -4.19%, rgba(0, 0, 0, 0) 68.55%),
+    linear-gradient(219.77deg, rgba(13, 209, 216, 0.795) 17.71%, rgba(0, 0, 0, 0.322) 125.01%), rgba(0, 0, 0, 0.7); */
+    border-bottom:1px solid rgba(255, 255, 255, 0.555);
+
+}
+
+.taskProfileSection {
+    position: absolute;
+    overflow: hidden;
+    margin-left: 2%;
+    margin-top: 3%;
+
+    /* background-color: red; */
+    height: 60%;
+    width: 12%;
+    
+}
+
+.taskProfileSection img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+}
+
+.taskNameSection {
+    position: absolute;
+    margin-top: 4.5%;
+    margin-left: 14%;
+    width: 45%;
+}
+
+.taskCharInfoName {
+    display: flex;
+    width: 35%;
+    overflow: hidden;
+    height: fit-content;
+    font-family: "Oswald";
+    /* font-style: normal; */
+    /* font-weight: 500; */
+    font-size: 21.5608px;
+    /* line-height: 32px; */
+    /* identical to box height */
+    color: white;
+    letter-spacing: 0.03em;
+}
+
+.taskLastName {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Oswald Light";
+    margin-left: 2%;
+}
+
+.taskCharSex {
+    font-family: "Oswald Light";
+    color: rgba(255, 255, 255, 0.43);
+}
+
+.taskMoneySection {
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    height: 100%;
+    width: 35%;
+    margin-top: -10%;
+    margin-left: 50%;
+}
+
+.taskMoneyListItem {
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.108); */
+    height: 40%;
+    margin-left: 35%;
+    margin-top: -2%;
+
+}
+
+.taskMoneyListItem:not(:last-child) {
+    margin-top: 5%;
+    
+    /* margin-bottom: 4%; */
+}
+
+.levelTextArea {
+     
+    width: 20%; 
+    display: flex;
+    margin-left: 85%;
+    height: 35%;
+    margin-top: 2.6%;
+    transform: scale(125%);
+}
+
+.currentLevel {
+    background: rgba(217, 217, 217, 0.08);
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    width: 17%;
+    height: 50%;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 13px;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+.currentXPArea {
+    font-size: 16px;
+    display: flex;
+    font-family: "Oswald";
+    color: #ffffff;
+    /* background-color: red; */
+    margin-top: 1%;
+    height: 100%;
+    width: 17%;
+    margin-left: 3%;
+}
+
+.neededXP {
+    color: #ffffff77;
+
+    margin-left: 15%;
+    font-size: 16px;
+}
+
+.jobsection {
+    position: absolute;
+
+    width: 20%;
+    height: 60%;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    
+    font-size: 25px;
+    font-family: 'Oswald Light';
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.jobsection_job {
+    color: white;
+}
+
+.moneySection {
+    /* background-color: rgba(255, 0, 0, 0.1); */
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-left: 15%;
+    margin-top: -7%;
+}
+
+.moneyListItem {
+    display: flex;
+    /* background-color: rgba(0, 0, 255, 0.108); */
+    height: 40%;
+    margin-top: 15%;
+}
+
+.moneyListItem:not(:last-child) {
+    margin-top: -12%;
+    /* margin-bottom: 4%; */
+}
+
+#walletIcon {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 1.3%;
+}
+
+.moneyTextArea {
+    font-family: "Oswald Light";
+    /* margin-top: 2%; */
+    margin-left: 4%;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+}
+
+#bankIcon {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 1%;
+}
+
+.cashMoneyValue {
+    font-family: Oswald;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.bankMoneyValue {
+    font-family: Oswald;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* INFO O GRACZU [END]*/
+
+
+/* JOB INFO WINDOW */
+
+
+
+/* JOB INFO WINDOW[END]*/
+
+
+
+
+
+
+.notifySection {
+    display: none;
+    z-index: 987;
+    position: absolute;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.notifyMain {
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 25px;
+    background-color: rgba(43, 255, 0, 0.287);
+    padding: 0.5rem;
+}
+
+#jobidnotify {
+    font-size: 1vw;
+    text-transform: uppercase;
+}
+.progressBar {
+    /* height: 10%; */
+    width: 85%;
+    margin-left: 10%;
+}
+
+.radialText {
+    font-family: "Oswald Light";
+    font-size: 22px;
+}
+
+
+
+
+.jobwindow_main {
+    position: relative;
+    width: 60%;
+    height: 65%;
+    margin-left: 35%;
+    margin-top: 13.5%;
+
+    /* height: 40.6vw; */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.jobwindow_image_main {
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #3f585fc8 0%, rgba(0, 0, 0, 0) 44.69%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 19.34%, rgba(0, 0, 0, 0) 19.35%, rgba(0, 0, 0, 0.85) 100%);
+    background-size: cover;
+}
+
+.jobwindow_bg_main {
+    opacity: 0.9;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.jobwindow_bg_main img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.jobwindow_job_name {
+    position: relative;
+    font-family: "Oswald";
+    /* background-color: red; */
+    width: 70%;
+    z-index: 987;
+    color: #ffffff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+
+    font-size: 2vw;
+    margin-left: 2.2vw;
+    margin-top: 1.5vw;
+}
+
+.jobwindow_job_desc {
+    color: rgba(255, 255, 255, 0.46);
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    font-family: "Oswald Light";
+    font-size: 0.8vw;
+    width: 40%;
+    z-index: 987;
+    position: relative;
+    margin-left: 2.2vw;
+}
+
+.jobwindow_info_main {
+    position: relative;
+    z-index: 987;
+    /* background-color: red; */
+    display: flex;
+}
+
+.jobwindow_top_left {
+    width: 80%;
+}
+
+.jobwindow_top_right {
+    /* background-color: red; */
+    margin-left: 3%;
+    width: 18%;
+}
+
+.jobwindow_job_level {
+    margin-top: 1.5vw;
+    text-transform: capitalize;
+    font-family: "Oswald";
+    font-size: 1vw;
+    width: 6.5vw;
+    height: 1.7vw;
+    line-height: 1.7vw;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.13)rgba(255, 255, 255, 0.13)3), rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    border-radius: 5px;
+}
+
+.jobwindow_job_mini_info {
+    /* background-color: red; */
+    width: 9vw;
+    height: 6vw;
+    margin-left: 0vw;
+    margin-top: 1.1vw;
+    overflow-y: auto;
+}
+
+.jobwindow_job_mini_item {
+    display: flex;
+}
+
+#jobwindow_job_mini_icon {
+    color: #ffffff;
+    text-shadow: 0px 0px 15px rgba(251, 255, 0, 0.2);
+    font-size: 0.5vw;
+    margin-top: 0.3vw;
+    margin-right: 0.5vw;
+}
+
+.jobwindow_job_mini_text {
+    font-family: "Oswald";
+    font-size: 0.7vw;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: capitalize;
+}
+
+.jobwindow_job_mini_item:not(:last-child) {
+    margin-bottom: 0.5vw;
+}
+
+.jobwindow_job_name_start {
+    position: relative;
+    z-index: 897;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    color: white;
+    font-family: "Oswald";
+    text-align: center;
+    margin-top: 11vw;
+    font-size: 2.5vw;
+}
+
+.jobwindow_job_start {
+    position: relative;
+    z-index: 987;
+    font-weight: 500;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    color: #ffffff;
+    font-family: "Oswald";
+    font-size: 1.5vw;
+    border: 2px solid #ffffff;
+    width: 9vw;
+    text-shadow: 0px 0px 15px rgba(251, 255, 0, 0.2);
+    height: 2.5vw;
+    line-height: 2.3vw;
+    border-radius: 4.85714px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.jobwindow_job_start:hover {
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.47);
+}
+
+
+
+.jobSelectedSection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98798789;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.loadedSection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98798789;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.loadedMain {
+    position: absolute;
+    height: 10vw;
+    width: 15vw;
+    top: 50%;
+    left: 50%;
+    margin-top: -5vw;
+    margin-left: -7.5vw;
+    background-color: rgba(0, 128, 64, 0.66);
+    border: 1px solid green;
+    border-radius: 1vw;
+}
+
+.jobSelectedMain {
+    position: absolute;
+    height: 10vw;
+    width: 15vw;
+    top: 50%;
+    left: 50%;
+    margin-top: -5vw;
+    margin-left: -7.5vw;
+    background-color: rgba(0, 128, 0, 0.66);
+    border: 1px solid green;
+    border-radius: 1vw;
+}
+
+.succesfully {
+    margin-top: 2.2vw;
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2vw;
+}
+
+.selectedText {
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+}
+.loadedText {
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+}
